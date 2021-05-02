@@ -7,7 +7,6 @@
 
     <!-- Appender to log to file in a JSON format -->
     <appender name="logstash" class="ch.qos.logback.core.rolling.RollingFileAppender">
-<!--        <file>/Users/RV0718/projects/spring-kafka/apps/flight-booking.log</file>-->
         <file>${LOG_FILE_PATH}/application.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 

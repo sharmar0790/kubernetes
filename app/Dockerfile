@@ -13,5 +13,6 @@ FROM openjdk:11-jdk-slim
 RUN mkdir -p /usr/local/tomcat/logs
 COPY --from=builder /build/target/*.jar /app/app.jar
 WORKDIR /usr/local/tomcat
+VOLUME /usr/local/tomcat/logs
 ENV JAVA_OPTS=""
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar /app/app.jar" ]

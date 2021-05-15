@@ -1,8 +1,0 @@
-FROM public.ecr.aws/aws-observability/aws-for-fluent-bit
-
-COPY ./fluent-bit.conf ./parser_java.conf /fluent-bit/etc/
-
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh && mkdir -p /usr/local/tomcat/logs
-
-CMD /entrypoint.sh

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "BUCKET_NAME >>>  " $BUCKET_NAME_ENV
-echo "CUSTOMER_FOLDER >>>  " $CUSTOMER_FOLDER
+#echo "BUCKET_NAME >>>  " $BUCKET_NAME
+#echo "CUSTOMER_FOLDER >>>  " $CUSTOMER_FOLDER
 
 rm -rf /fluent-bit/etc/
 aws s3 cp --recursive  s3://$BUCKET_NAME/$CUSTOMER_FOLDER /fluent-bit/etc/
